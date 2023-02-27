@@ -210,13 +210,14 @@ input:focus {
   background-color: hsl(279, 6%, 55%);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   body {
     display: flex;
     flex-direction: column;
   }
   .bg-main-desktop {
-    height: 30vh;
+    height: 210px;
+    width: 100vw;
   }
   .bg-card {
     position: absolute;
@@ -224,25 +225,25 @@ input:focus {
     height: 140px;
   }
   .bg-card-front {
-    left: 5vw;
-    top: 15.5vh;
+    left: 15px;
+    top: 110px;
     z-index: 2;
   }
   .bg-card-back {
-    left: 25vw;
-    top: 3vh;
+    left: 90px;
+    top: 33px;
   }
   .creditCardData {
     z-index: 2;
   }
   .credit-card-number {
-    left: 9vw;
-    top: 28vh;
+    left: 35px;
+    top: 200px;
     font-weight: normal;
   }
   .credit-card-name-expDate {
-    left: 9vw;
-    top: 34vh;
+    left: 35px;
+    top: 230px;
     font-weight: normal;
     font-size: 0.6rem;
     width: 245px;
@@ -250,7 +251,8 @@ input:focus {
   .bg-card__container::before {
     content: url("../img/card-logo.svg");
     position: absolute;
-    left: 9vw;
+    left: 35px;
+    top: 130px;
   }
   .cardholder {
     font-size: 0.6rem;
@@ -261,8 +263,7 @@ input:focus {
     margin-bottom: 0px;
   }
   .secutiryCode__container {
-    /* z-index: 3; */
-    top: 80px;
-    left: 10vw;
+    top: 93px;
+    left: 30px;
   }
 }

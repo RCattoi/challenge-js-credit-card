@@ -67,9 +67,6 @@ label {
   height: 36px;
   cursor: pointer;
 }
-.form__btn:focus {
-  /* cursor: pointer; */
-}
 
 .form__expDateContainer {
   width: 147px;
@@ -120,7 +117,7 @@ input:focus {
 }
 
 .bg-card__container::before {
-  content: url("/img/card-logo.svg");
+  content: url("./img/card-logo.SVG");
   position: absolute;
   left: 25vw;
   top: 17vh;

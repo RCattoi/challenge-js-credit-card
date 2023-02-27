@@ -1,0 +1,214 @@
+html {
+  font-family: "Space Grotesk";
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  position: relative;
+}
+.bg-main-desktop {
+  height: 100vh;
+  display: block;
+  object-fit: fill;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form,
+.cardObtained {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+  font-family: "Space Grotesk";
+  font-size: 0.7rem;
+}
+.form__otherInformation {
+  display: flex;
+}
+.form__input--small {
+  max-width: 45px;
+}
+.form__input--medium {
+  max-width: 135px;
+}
+.form__input--large {
+  min-width: 285px;
+}
+.cardholder {
+  font-size: 0.75rem;
+}
+.form__label--large {
+  min-width: 285px;
+}
+label {
+  display: block;
+  text-align: left;
+  height: 20px;
+  margin: 15px 0px 5px 0px;
+}
+.form__btn {
+  width: 291px;
+  font-family: "Space Grotesk";
+  margin-top: 20px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  border-radius: 5px;
+  height: 36px;
+  cursor: pointer;
+}
+.form__btn:focus {
+  /* cursor: pointer; */
+}
+
+.form__expDateContainer {
+  width: 147px;
+}
+
+.form__expDateContainer div {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  height: 22px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px rgba(199, 199, 199, 0.425) solid;
+  padding: 5px;
+  font-weight: 525;
+  margin-bottom: 10px;
+}
+
+input::placeholder {
+  color: rgba(199, 199, 199, 0.425);
+}
+
+input:hover,
+input:focus {
+  outline: none;
+  border-image: linear-gradient(0deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 2;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.bg-card {
+  position: absolute;
+  width: 300px;
+  height: 170px;
+}
+.bg-card-front {
+  left: 23vw;
+  top: 15vh;
+}
+
+.bg-card-back {
+  left: 28vw;
+  top: 48vh;
+}
+
+.bg-card__container::before {
+  content: url("/img/card-logo.svg");
+  position: absolute;
+  left: 25vw;
+  top: 17vh;
+  z-index: 1;
+}
+
+.credit-card-number {
+  position: absolute;
+  left: 25vw;
+  top: 29vh;
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.credit-card-name-expDate {
+  position: absolute;
+  left: 25vw;
+  top: 37vh;
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  font-size: 0.85rem;
+}
+.creditCardData {
+  color: white;
+  text-transform: uppercase;
+}
+.secutiryCode__container {
+  width: 290px;
+  position: absolute;
+  left: 25vw;
+  top: 60vh;
+  font-size: 0.75rem;
+  text-align: right;
+}
+.cardholderError,
+.cardNumberError {
+  width: 280px;
+}
+.errorText {
+  color: hsl(0, 100%, 66%);
+  font-size: 0.5rem;
+  /* margin-top: 3px; */
+  text-align: left;
+  display: none;
+  position: absolute;
+  bottom: -3px;
+}
+.erroInput,
+.erroInput:hover {
+  border: 1px hsl(0, 100%, 66%) solid;
+}
+.form__inputContainer {
+  position: relative;
+}
+
+.cvcError {
+  width: 200px;
+}
+
+.cardObtained {
+  max-height: 600px;
+  text-align: center;
+  display: none;
+}
+.cardObtained h1 {
+  letter-spacing: 3px;
+  margin: 20px 0px;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.cardObtained__btn {
+  display: block;
+}
+
+.cardObtained span {
+  color: hsl(279, 6%, 55%);
+  text-transform: none;
+}
+
+.cardObtained input {
+  margin-top: 45px;
+  height: 45px;
+  width: 340px;
+}
+
+.form__btn--disable {
+  pointer-events: none;
+  background-color: hsl(279, 6%, 55%);
+}

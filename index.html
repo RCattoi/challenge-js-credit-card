@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.PNG">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+</head>
+
+<body>
+  <div class="bg-card__container"><img class="bg-main-desktop" src="./img/bg-main-desktop.png" alt=""></div>
+  <img class="bg-card bg-card-front" src="./img/bg-card-front.png" alt="">
+  <span class="cardNumber creditCardData credit-card-number">0000 0000 0000 0000</span>
+  <div class="creditCardData credit-card-name-expDate">
+    <span class="cardholder">Jane APPLESEED</span>
+    <div>
+      <span class="expDateMonth">00</span>
+      <span>/</span>
+      <span class="expDateYear">00</span>
+    </div>
+  </div>
+  <img class="bg-card bg-card-back" src="./img/bg-card-back.png" alt="">
+  <div class="secutiryCode__container"><span class="cvc creditCardData credit-cardSecCode">000</span></div>
+  <form name="checkout" id="checkout">
+    <div class="form__inputContainer">
+      <label class="form__label--large" for="credit-number">cardholder name</label>
+      <input class="form__input--large inputcardholder" placeholder="e.g. Jane Applessed" type="text" name="cardholder" id="cardholder">
+      <span class="errorText cardholderError">Wrong format, letters only!</span>
+    </div>
+    <div class="form__inputContainer">
+      <label class="form__label--large" for="cardNumber">card number</label>
+      <input class="inputcardNumber form__input--large" type="text" placeholder="e.g. 1234 1234 1234 1234" name="cardNumber" id="cardNumber" pattern="/^\s*-?\s*\d+(?:\.\d*)?\s*$/" onKeyPress="if(this.value.length==19) return false;">
+      <span class="errorText cardNumberError">Wrong format, numbers only!</span>
+    </div>
+    <div class="form__otherInformation">
+      <div class="form__inputContainer form__expDateContainer">
+        <label class="" for="exp. date (mm/yy)">exp. date (mm/yy)</label>
+        <div>
+          <input class="inputexpDateMonth form__input--small" placeholder="MM" name="expDateMonth" type="number" onKeyPress="if(this.value.length==2) return false;">
+          <input class="inputexpDateYear form__input--small" name="expDateYear" placeholder="YY" type="number" onKeyPress="if(this.value.length==2) return false;">
+
+        </div>
+        <div class="teste">
+          <span class="errorText expDateMonthError">Wrong format in month</span>
+          <span class="errorText expDateYearError">Wrong format in year</span>
+        </div>
+      </div>
+      <div class="form__inputContainer">
+        <label for="cvc">cvc</label>
+        <input class="inputcvc form__input--medium" placeholder="e.g. 123" type="number" name="cvc" id="cvc" onKeyPress="if(this.value.length==3) return false;">
+        <span class="errorText cvcError">Wrong format, numbers only!</span>
+
+      </div>
+    </div>
+    <input class="form__btn" type="button" value="Confirm">
+  </form>
+  <div class="cardObtained">
+    <div>
+      <img src="/img/icon-complete.SVG">
+      <h1>thank you!</h1>
+      <span class="cardObtained__span">We've added your card details</span>
+      <input class="cardObtained__btn form__btn" type="button" value="Continue">
+    </div>
+  </div>
+
+</body>
+
+<script src="/js/modules/script.js"></script>
+
+</html>

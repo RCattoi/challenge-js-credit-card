@@ -117,7 +117,7 @@ input:focus {
 }
 
 .bg-card__container::before {
-  content: url("./img/card-logo.SVG");
+  content: url("./img/card-logo.svg");
   position: absolute;
   left: 25vw;
   top: 17vh;

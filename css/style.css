@@ -121,7 +121,7 @@ input:focus {
   position: absolute;
   left: 25vw;
   top: 17vh;
-  z-index: 1;
+  z-index: 3;
 }
 
 .credit-card-number {
@@ -208,4 +208,61 @@ input:focus {
 .form__btn--disable {
   pointer-events: none;
   background-color: hsl(279, 6%, 55%);
+}
+
+@media (max-width: 400px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .bg-main-desktop {
+    height: 30vh;
+  }
+  .bg-card {
+    position: absolute;
+    width: 270px;
+    height: 140px;
+  }
+  .bg-card-front {
+    left: 5vw;
+    top: 15.5vh;
+    z-index: 2;
+  }
+  .bg-card-back {
+    left: 25vw;
+    top: 3vh;
+  }
+  .creditCardData {
+    z-index: 2;
+  }
+  .credit-card-number {
+    left: 9vw;
+    top: 28vh;
+    font-weight: normal;
+  }
+  .credit-card-name-expDate {
+    left: 9vw;
+    top: 34vh;
+    font-weight: normal;
+    font-size: 0.6rem;
+    width: 245px;
+  }
+  .bg-card__container::before {
+    content: url("../img/card-logo.svg");
+    position: absolute;
+    left: 9vw;
+  }
+  .cardholder {
+    font-size: 0.6rem;
+  }
+  form,
+  .cardObtained {
+    margin-top: 70px;
+    margin-bottom: 0px;
+  }
+  .secutiryCode__container {
+    /* z-index: 3; */
+    top: 80px;
+    left: 10vw;
+  }
 }
